@@ -64,7 +64,7 @@ function walkPagesRouter(dir: string, baseDir: string, routes: Route[]): void {
       const routePath = '/' + rel
         .replace(/\\/g, '/')
         .replace(/\.(tsx?|jsx?)$/, '')
-        .replace(/\/index$/, '')
+        .replace(/(\/index|^index)$/, '')
         .replace(/\[([^\]]+)\]/g, ':$1');
 
       routes.push({

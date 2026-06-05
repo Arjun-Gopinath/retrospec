@@ -54,6 +54,7 @@ test.describe('User login', () => {
 
 describe('generateTest', () => {
   beforeEach(() => {
+    mockCallClaude.mockClear();
     mockCallClaude.mockResolvedValue(MOCK_TEST_CONTENT);
   });
 

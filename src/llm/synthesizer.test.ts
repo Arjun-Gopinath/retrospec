@@ -40,6 +40,7 @@ const VALID_JOURNEYS_JSON = JSON.stringify([
 
 describe('synthesizeJourneys', () => {
   beforeEach(() => {
+    mockCallClaude.mockClear();
     mockCallClaude.mockResolvedValue(VALID_JOURNEYS_JSON);
   });
 
@@ -93,6 +94,7 @@ describe('synthesizeJourneys', () => {
 
 describe('synthesizeFromPrompt', () => {
   beforeEach(() => {
+    mockCallClaude.mockClear();
     mockCallClaude.mockResolvedValue(VALID_JOURNEYS_JSON);
   });
 
